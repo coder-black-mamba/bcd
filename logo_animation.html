@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logo Animation</title>
+    <style>
+      .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          /* background: #000; * /
+      }
+      .logo {
+          position: relative;
+      }
+      .logo_main_rotate{
+             position: absolute;
+             animation: rotate 3s linear infinite;
+             /* top: 20px;
+             left: 50px; */
+             z-index: -3000;
+             top: 0;
+             left: 0;
+      }
+      .logo_abs_fixed{
+          position: absolute;
+
+          /* top: 20px;
+          left: 50px; */
+          top: 0;
+          left: 0;
+      }
+      @keyframes rotate {
+          0% {
+              transform: rotate(0deg);
+          }
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="logo" width="200px" height="200px">
+        <img
+          class="logo_abs_fixed"
+          width="150px"
+          height="150px"
+          src="assets/institute_logo_final.png"
+          alt="logo"
+        />
+        <img
+          class="logo_main_rotate"
+          width="250px"
+          height="250px"
+          src="assets/institute_logo_final.png"
+          alt="logo"
+        />
+        <!-- <img width="150px" height="150px" src="assets/institute_logo_final.png" alt="logo"> -->
+        <!-- <img width="150px" height="150px" src="assets/institute_logo_final.png" alt="logo"> -->
+      </div>
+    </div>
+  </body>
+</html>
